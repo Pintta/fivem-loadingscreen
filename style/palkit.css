@@ -57,17 +57,6 @@
     font-size: 15px;
   }
   
-  .textbox .heading-textbox::before {
-      position: fixed;
-      content: "";
-      width: 4px;
-      height: 23px;
-      background-color: #0084ff;
-      left: 12.3%;
-      border-radius: 20px;
-      margin-top: 1px;
-  }
-  
   .blue-text {
       color: #0084ff;
   }
