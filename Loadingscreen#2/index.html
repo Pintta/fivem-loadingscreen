@@ -1,0 +1,517 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./animaatio.css">
+        <style>
+            * {
+            box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                font-family: Arial;
+                font-size: 17px;
+                background-color: rgb(3, 32, 26);
+            }
+
+            .gallery {
+                --_width: 50px;
+                --_border-width: 6px;
+                --_border-width-hover: 6px;
+                --_border-clr: rgba(32, 206, 200, 0.516);
+                --_h2-bg-clr: rgba(32, 206, 200, 0);
+                --_h2-txt-clr: rgb(0, 0, 0);
+                --_transition-speed: 300ms;
+                --_clip: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+                width: fit-content;
+                max-width: 4xl;
+                display: grid;
+                grid-template-columns: repeat(10, var(--_width));
+                gap: .75em;
+            }
+
+            .avatar {
+                background-color: var(--_border-clr);
+                display: block;
+                grid-column: span 4 / span 4;
+                grid-row: span 4 / span 4;
+                width: calc(var(--_width) * 3);
+                height: calc(var(--_width) * 3);
+                position: relative;
+                overflow: hidden;
+                isolation: isolate;
+                clip-path: var(--_clip);
+                transition: clip-path ease-in-out var(--_transition-speed) var(--_transition-speed),
+                opacity ease-in-out var(--_transition-speed),
+                scale ease-in-out var(--_transition-speed);
+            }
+
+            .avatar::before {
+                content: '';
+                position: absolute;
+                inset: var(--_border-width);
+                clip-path: var(--_clip);
+                background-image: var(--img);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                transition: var(--_transition-speed) ease-in-out;
+                
+            }
+            .avatar:nth-child(1) {
+                grid-row-start: 1;
+                grid-column-start: 5;
+            }
+            .avatar:nth-child(2) {
+                grid-row-start: 3;
+                grid-column-start: 3;
+            }
+            .avatar:nth-child(3) {
+                grid-row-start: 3;
+                grid-column-start: 7;
+            }
+            .avatar:nth-child(4) {
+                grid-row-start: 5;
+                grid-column-start: 1;
+            }
+            .avatar:nth-child(5) {
+                grid-row-start: 5;
+                grid-column-start: 5;
+            }
+            .avatar:nth-child(6) {
+                grid-row-start: 5;
+                grid-column-start: 9;
+            }
+            .avatar:nth-child(7) {
+                grid-row-start: 7;
+                grid-column-start: 3;
+            }
+            .avatar:nth-child(8) {
+                grid-row-start: 7;
+                grid-column-start: 7;
+            }
+            .avatar:nth-child(9) {
+                grid-row-start: 9;
+                grid-column-start: 1;
+            }
+            .avatar:nth-child(10) {
+                grid-row-start: 9;
+                grid-column-start: 5;
+            }
+            .avatar:nth-child(11) {
+                grid-row-start: 9;
+                grid-column-start: 9;
+            }
+            .avatar:nth-child(12) {
+                grid-row-start: 11;
+                grid-column-start: 3;
+            }
+            .avatar:nth-child(13) {
+                grid-row-start: 11;
+                grid-column-start: 7;
+            }
+            .avatar:nth-child(14) {
+                grid-row-start: 13;
+                grid-column-start: 5;
+            }
+            @keyframes KPzIndexHack {
+                100% {
+                    z-index: 10;
+                }
+            }
+            .logoalue {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            img {
+                width: 400;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="logoalue">
+            <table>
+                <tr>
+                <th>
+                    <div class="gallery ">
+                        <div class="avatar" style="--img:url('https://cdn.discordapp.com/avatars/1081379214269362186/a_99ac50dafb22e36b25e3bc77d35707b4.gif?size=2048')"></div>
+                        <div class="avatar" style="--img:url('https://cdn.discordapp.com/avatars/1001974941996023891/ba083aae3025c38d2b286eb65d0033c9.png?size=2048')"></div>
+                        <div class="avatar" style="--img:url('https://cdn.discordapp.com/avatars/290730425670959105/a_561d684a70fc55878605181965aa14fe.gif?size=2048')"></div>
+                        <div class="avatar" style="--img:url('https://cdn.discordapp.com/avatars/533365382468206593/da03354418a81b2b78352da08f862b75.png?size=2048')"></div>
+                        <div class="avatar" style="--img:url('https://cdn.discordapp.com/avatars/561961303212556344/4173cf147b3c5b8ff1c2f1d190baccc7.png?size=2048')"></div>
+                        <div class="avatar" style="--img:url('https://cdn.discordapp.com/avatars/767347433818030081/8321659e56c862b649352c779970ebdd.png?size=2048')"></div>
+                        <div class="avatar" style="--img:url('https://cdn.discordapp.com/avatars/1008402312106082425/551eb833e8df536cc1aedf3aa9cebd2e.png?size=2048')"></div>
+                        <div class="avatar" style="--img:url('https://cdn.discordapp.com/avatars/767760390389628988/42caaaf452c04894266d673aa4bad69e.png?size=2048')"></div>
+                        <div class="avatar" style="--img:url('https://cdn.discordapp.com/avatars/723079758572814368/f40dc3aea3371940b54bdd566e8c2fcc.png?size=2048')"></div>
+                    </div>
+                </th>
+                <th><img style="width: 50%;"src="logo.png"></th>
+                </tr>
+            </table>
+        </div>
+        <div id="audio">
+            <audio id="loading" src="song/song2.mp3" autoplay="true" hidden="true" loop="true"></audio>
+        </div>
+        <script>
+            var play = false;
+            var vid = document.getElementById("loading");
+            vid.volume = 0.025;
+            window.addEventListener('keyup', function(e) {
+                if (e.which == 38) {
+                    vid.volume = Math.min(vid.volume + 0.025, 1);
+                } else if (e.which == 40) {
+                    vid.volume = Math.max(vid.volume - 0.025, 0);
+                };
+            });
+            var mutetext = document.getElementById("text");
+            var songname = document.getElementById("songname");
+            window.addEventListener("keyup", function(event) {
+                if (event.which == 37) {
+                    if (document.getElementById("loading").src.endsWith("song2.mp3")) {
+                        document.getElementById("loading").src = "song/song1.mp3";
+
+                    } else if (document.getElementById("loading").src.endsWith("song1.mp3")) {
+                        document.getElementById("loading").src = "song/song3.mp3";
+
+                    } else if (document.getElementById("loading").src.endsWith("song3.mp3")) {
+                        document.getElementById("loading").src = "song/song2.mp3";
+                    }
+                    document.getElementById("loading").play();
+                    mutetext.innerHTML = "MUTE";
+                }
+                if (event.which == 39) {
+                    if (document.getElementById("loading").src.endsWith("song2.mp3")) {
+                        document.getElementById("loading").src = "song/song3.mp3";
+
+                    } else if (document.getElementById("loading").src.endsWith("song3.mp3")) {
+                        document.getElementById("loading").src = "song/song1.mp3";
+
+                    } else if (document.getElementById("loading").src.endsWith("song1.mp3")) {
+                        document.getElementById("loading").src = "song/song2.mp3";
+
+                    }
+                    document.getElementById("loading").play();
+                    mutetext.innerHTML = "MUTE";
+                }
+
+            });
+            var audio = document.querySelector('audio');
+            if (audio) {
+                window.addEventListener('keydown', function(event) {
+                    var key = event.which || event.keyCode;
+                    if (key === 32) {
+                        event.preventDefault();
+                        audio.paused ? audio.play() : audio.pause();
+                    } else if (key === 32) {
+                        event.preventDefault();
+                        audio.paused ? audio.play() : audio.pause();
+                    }
+                });
+            }
+        </script>
+        <div class="container">
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-container">
+                <div class="circle"></div>
+            </div>
+          </div>
+    </body>
+</html>
