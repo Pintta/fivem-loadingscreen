@@ -1,10 +1,12 @@
 # fivem-loadingscreen
-FiveM loadingscreen with music
+Ultra light FiveM loadingscreen with music
 
 Loadingscreen from Revohka Roleplay [https://cfx.re/join/5g8zmz]
 
 I do loadingscreens using pure open source code.
+#
 If you want customized loadingscreen, contact to me Discord: copperplatinum
+#
 Added yours own logo.png file on folder and working.
 
 Loadingscreen #1
